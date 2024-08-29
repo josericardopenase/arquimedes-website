@@ -7,7 +7,7 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Modo claro ScrollBar*/
+/* Modo claro ScrollBar */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -24,25 +24,18 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #a0aec0;
 }
-  
-/* Modo oscuro ScrollBar*/
-@media (prefers-color-scheme: dark) {
 
-    ::-webkit-scrollbar {
-        width: 12px;
-    }
+/* Modo oscuro ScrollBar cuando la clase .dark está en <html> */
+.dark ::-webkit-scrollbar-track {
+    background: #2d3748;
+}
 
-    ::-webkit-scrollbar-track {
-        background: #2d3748;
-    }
+.dark ::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 6px;
+}
 
-    ::-webkit-scrollbar-thumb {
-        background: #4a5568;
-        border-radius: 6px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #2d3748;
-    }
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #2d3748;
 }
 

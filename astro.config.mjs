@@ -10,5 +10,6 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind()],
   redirects: {
     "/docs" : "/docs/get-started"
-  }
+  },
+  darkMode: 'class',
 });
