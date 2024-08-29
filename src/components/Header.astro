@@ -59,13 +59,28 @@ import { SITE_TITLE } from '../consts';
 
 		});
 	});
+
 	const toggleButton = document.getElementById('darkModeToggle');
 	const sunIcon = document.getElementById('sunIcon');
 	const moonIcon = document.getElementById('moonIcon');
 	const htmlElement = document.documentElement;
 
+	document.addEventListener('DOMContentLoaded', () => {
+		const isDarkMode = localStorage.getItem('theme') === 'dark';
+		if (isDarkMode) {
+			htmlElement.classList.add('dark');
+			sunIcon?.classList.add('hidden');
+			moonIcon?.classList.remove('hidden');
+		} else {
+			htmlElement.classList.remove('dark');
+			sunIcon?.classList.remove('hidden');
+			moonIcon?.classList.add('hidden');
+		}
+	});
+
 	toggleButton?.addEventListener('click', () => {
-		htmlElement.classList.toggle('dark');
+		const isDarkMode = htmlElement.classList.toggle('dark');
+		localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 
 		sunIcon?.classList.toggle('hidden');
 		moonIcon?.classList.toggle('hidden');
