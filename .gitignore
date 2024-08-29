@@ -12,6 +12,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# assets profiles
+src/assets/profiles/
+
 
 # environment variables
 .env
